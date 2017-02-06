@@ -44,7 +44,7 @@ module.exports = {
                 (line.indexOf('GET') == -1) && (line.indexOf('POST') == -1) && (line.indexOf('PUT') == -1) && (line.indexOf('DELETE') == -1)) {
                 rootPath = '';
                 var start = line.indexOf('/');
-                var part = line.substring(start, line.length - 1);
+                var part = line.substr(start);
                 rootPath = utils.String.trim(part);
             }
 
